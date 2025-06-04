@@ -17,7 +17,7 @@ function MobileMenu({ isMenuOpen, setIsMenuOpen, menuItems, currentPage, handleP
           <div className="flex items-center justify-between mb-4 sm:mb-6 lg:mb-8 pb-3 sm:pb-4 border-b border-gray-200">
             <div className="flex items-center min-w-0 flex-1">
               <img 
-                src="/assets/imgs/LogoPharma.png" 
+                src="/PharmacieDuStade/assets/imgs/LogoPharma.png" 
                 alt="Logo" 
                 className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 mr-2 sm:mr-3 rounded-full shadow-md flex-shrink-0" 
               />

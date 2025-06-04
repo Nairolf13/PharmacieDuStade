@@ -13,7 +13,7 @@ function HeroSection() {
           </p>
           <div className="mb-8">
             <img 
-              src="/assets/imgs/pharma.webp" 
+              src="/PharmacieDuStade/assets/imgs/pharma.webp" 
               alt="Pharmacie du Stade" 
               className="accueil-hero-image"
             />

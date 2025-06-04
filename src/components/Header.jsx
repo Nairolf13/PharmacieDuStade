@@ -7,7 +7,7 @@ function Header({ currentPage, menuItems, isMenuOpen, setIsMenuOpen, handlePageC
         <div className="flex items-center justify-between h-12 sm:h-14 lg:h-16">
           <div className="flex items-center min-w-0 flex-1">
             <img 
-              src="/assets/imgs/LogoPharma.png" 
+              src="/PharmacieDuStade/assets/imgs/LogoPharma.png" 
               alt="Pharmacie Logo" 
               className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14 mr-2 sm:mr-3 lg:mr-4 flex-shrink-0 rounded-full shadow-md" 
             />
