@@ -1,0 +1,512 @@
+/* Global styles and animations */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animations et effets modernes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Classes d'animation globales */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.6s ease-out;
+}
+
+.pulse-hover:hover {
+  animation: pulse 0.6s ease-in-out;
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient backgrounds globaux */
+.gradient-bg {
+  background: linear-gradient(135deg, #0f5132 0%, #198754 50%, #20c997 100%);
+}
+
+.gradient-green {
+  background: linear-gradient(135deg, #0f5132 0%, #198754 100%);
+}
+
+.gradient-blue {
+  background: linear-gradient(135deg, #0f5132 0%, #20c997 100%);
+}
+
+.gradient-pharmacy {
+  background: linear-gradient(135deg, #0d4f2c 0%, #198754 100%);
+}
+
+/* Glass effect global */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(15, 81, 50, 0.2);
+}
+
+/* Card hover effects globaux */
+.card-hover {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #0f5132, #198754);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #198754, #20c997);
+}
+
+/* Text shadow for hero text */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Boutons styles globaux */
+.btn-primary {
+  @apply bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105;
+}
+
+.btn-danger {
+  @apply bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105;
+}
+
+/* Styles pour le menu burger */
+.burger-menu-overlay {
+  backdrop-filter: blur(4px);
+}
+
+.burger-menu-panel {
+  box-shadow: -10px 0 25px -5px rgba(0, 0, 0, 0.1), -20px 0 50px -10px rgba(0, 0, 0, 0.1);
+}
+
+.burger-menu-item {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-menu-item:hover {
+  transform: translateX(4px);
+}
+
+.burger-menu-item.active {
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15);
+}
+
+/* Animation pour les barres du burger */
+.burger-bar {
+  transform-origin: center;
+}
+
+/* Responsive breakpoints pour le menu */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-burger {
+    display: none;
+  }
+}
+
+/* Amélioration de l'accessibilité */
+.menu-focus:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.5);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling pour les transitions */
+@media (prefers-reduced-motion: no-preference) {
+  .burger-menu-panel {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .burger-menu-overlay {
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+
+/* Styles globaux pour la responsivité parfaite */
+
+/* Variables CSS pour la cohérence */
+:root {
+  --header-height: 4rem;
+  --container-padding: 1rem;
+  --max-content-width: 1536px;
+  --border-radius-base: 0.5rem;
+  --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --transition-base: all 0.2s ease-in-out;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --header-height: 5rem;
+    --container-padding: 1.5rem;
+    --border-radius-base: 0.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-height: 6rem;
+    --container-padding: 2rem;
+    --border-radius-base: 1rem;
+  }
+}
+
+/* Reset et base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #374151;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Container responsif universel */
+.responsive-container {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Grid responsive */
+.responsive-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .responsive-grid {
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-grid {
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .responsive-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Flexbox utilitaires responsifs */
+.flex-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .flex-responsive {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+/* Typography responsive */
+.text-responsive-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-responsive-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-responsive-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-responsive-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-responsive-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media (min-width: 640px) {
+  .text-responsive-sm { font-size: 1rem; line-height: 1.5rem; }
+  .text-responsive-base { font-size: 1.125rem; line-height: 1.75rem; }
+  .text-responsive-lg { font-size: 1.25rem; line-height: 1.75rem; }
+  .text-responsive-xl { font-size: 1.5rem; line-height: 2rem; }
+  .text-responsive-2xl { font-size: 1.875rem; line-height: 2.25rem; }
+}
+
+@media (min-width: 1024px) {
+  .text-responsive-sm { font-size: 1.125rem; line-height: 1.75rem; }
+  .text-responsive-base { font-size: 1.25rem; line-height: 1.75rem; }
+  .text-responsive-lg { font-size: 1.5rem; line-height: 2rem; }
+  .text-responsive-xl { font-size: 1.875rem; line-height: 2.25rem; }
+  .text-responsive-2xl { font-size: 2.25rem; line-height: 2.5rem; }
+}
+
+/* Spacing responsive */
+.spacing-responsive-sm {
+  padding: 0.5rem;
+}
+
+.spacing-responsive-md {
+  padding: 1rem;
+}
+
+.spacing-responsive-lg {
+  padding: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .spacing-responsive-sm { padding: 0.75rem; }
+  .spacing-responsive-md { padding: 1.5rem; }
+  .spacing-responsive-lg { padding: 2rem; }
+}
+
+@media (min-width: 1024px) {
+  .spacing-responsive-sm { padding: 1rem; }
+  .spacing-responsive-md { padding: 2rem; }
+  .spacing-responsive-lg { padding: 3rem; }
+}
+
+/* Cards responsives */
+.card-responsive {
+  background: white;
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--shadow-base);
+  padding: var(--container-padding);
+  transition: var(--transition-base);
+}
+
+.card-responsive:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+/* Boutons responsifs */
+.btn-responsive {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--border-radius-base);
+  transition: var(--transition-base);
+  border: none;
+  cursor: pointer;
+  min-height: 44px; /* Taille tactile minimale */
+}
+
+@media (min-width: 640px) {
+  .btn-responsive {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    min-height: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn-responsive {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* Support pour les appareils tactiles */
+@media (hover: none) and (pointer: coarse) {
+  .btn-responsive,
+  button,
+  [role="button"] {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+
+/* Optimisations pour l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .card-responsive {
+    border: 2px solid #374151;
+  }
+  
+  .btn-responsive {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Support pour les thèmes sombres */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111827;
+    color: #f9fafb;
+  }
+  
+  .card-responsive {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+  }
+}
+
+/* Optimisations pour l'impression */
+@media print {
+  * {
+    color: black !important;
+    background: white !important;
+    box-shadow: none !important;
+  }
+  
+  .responsive-container {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+/* Support pour les écrans ultra-larges */
+@media (min-width: 2560px) {
+  :root {
+    --max-content-width: 2048px;
+    --container-padding: 3rem;
+  }
+  
+  body {
+    font-size: 1.125rem;
+  }
+}
+
+/* Centrage parfait pour tous les contenus */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.center-content-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optimisations pour les écrans étroits */
+@media (max-width: 320px) {
+  :root {
+    --container-padding: 0.75rem;
+  }
+  
+  .text-responsive-2xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+/* Support pour les orientations mixtes */
+@media (max-height: 600px) and (orientation: landscape) {
+  .responsive-container {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}

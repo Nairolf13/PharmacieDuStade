@@ -1,0 +1,176 @@
+/* Styles spécifiques à la page de recherche de médicaments */
+
+/* Container principal */
+.recherche-container {
+  @apply min-h-screen bg-gray-50 py-8;
+}
+
+.recherche-main {
+  @apply container mx-auto px-6;
+}
+
+/* Header section */
+.recherche-header {
+  @apply text-center mb-8 fade-in-up;
+}
+
+.recherche-title {
+  @apply text-4xl font-bold text-green-700 mb-4;
+}
+
+.recherche-subtitle {
+  @apply text-lg text-gray-600 mb-6;
+}
+
+/* Search section */
+.recherche-search-section {
+  @apply bg-white rounded-2xl shadow-lg p-6 mb-8 card-hover;
+}
+
+.recherche-search-container {
+  @apply relative;
+}
+
+.recherche-search-input {
+  @apply w-full px-4 py-3 border-2 border-green-300 rounded-lg focus:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-200 transition-all;
+}
+
+.recherche-search-icon {
+  @apply absolute right-3 top-1/2 transform -translate-y-1/2 text-green-500;
+}
+
+/* Loading state */
+.recherche-loading {
+  @apply text-center py-8;
+}
+
+.recherche-loading-spinner {
+  @apply inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-green-500;
+}
+
+.recherche-loading-text {
+  @apply text-green-600 mt-2;
+}
+
+/* Statistics section */
+.recherche-stats {
+  @apply bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-6 mb-6 slide-in-left;
+}
+
+.recherche-stats-grid {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-4;
+}
+
+.recherche-stat-item {
+  @apply text-center;
+}
+
+.recherche-stat-number {
+  @apply text-2xl font-bold;
+}
+
+.recherche-stat-label {
+  @apply text-sm opacity-90;
+}
+
+/* Results section */
+.recherche-results-info {
+  @apply mb-4 text-green-700 font-medium;
+}
+
+.recherche-results-grid {
+  @apply grid gap-4;
+}
+
+/* Medication card */
+.recherche-medication-card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border-l-4 border-green-400 card-hover;
+}
+
+.recherche-medication-header {
+  @apply flex items-start justify-between mb-4;
+}
+
+.recherche-medication-name {
+  @apply text-xl font-bold text-gray-800 mb-2;
+}
+
+.recherche-medication-status {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.recherche-medication-status.commercialise {
+  @apply bg-green-100 text-green-800;
+}
+
+.recherche-medication-status.non-commercialise {
+  @apply bg-red-100 text-red-800;
+}
+
+.recherche-medication-details {
+  @apply grid md:grid-cols-2 gap-4;
+}
+
+.recherche-medication-detail {
+  @apply flex items-center text-sm text-gray-600;
+}
+
+.recherche-medication-detail-icon {
+  @apply mr-2 text-green-500;
+}
+
+/* Empty state */
+.recherche-empty {
+  @apply text-center py-12;
+}
+
+.recherche-empty-icon {
+  @apply text-6xl mb-4;
+}
+
+.recherche-empty-title {
+  @apply text-xl font-semibold text-gray-600 mb-2;
+}
+
+.recherche-empty-text {
+  @apply text-gray-500;
+}
+
+/* Error state */
+.recherche-error {
+  @apply bg-red-50 border border-red-200 rounded-lg p-4 mb-6;
+}
+
+.recherche-error-title {
+  @apply text-red-800 font-medium mb-1;
+}
+
+.recherche-error-text {
+  @apply text-red-600 text-sm;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .recherche-title {
+    @apply text-3xl;
+  }
+  
+  .recherche-stats-grid {
+    @apply grid-cols-2;
+  }
+  
+  .recherche-medication-details {
+    @apply grid-cols-1;
+  }
+  
+  .recherche-medication-header {
+    @apply flex-col items-start gap-2;
+  }
+}
+
+/* Animation delays pour les cartes */
+.recherche-medication-card:nth-child(1) { animation-delay: 0.1s; }
+.recherche-medication-card:nth-child(2) { animation-delay: 0.2s; }
+.recherche-medication-card:nth-child(3) { animation-delay: 0.3s; }
+.recherche-medication-card:nth-child(4) { animation-delay: 0.4s; }
+.recherche-medication-card:nth-child(5) { animation-delay: 0.5s; }

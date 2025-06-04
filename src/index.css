@@ -1,0 +1,6 @@
+/* Import des styles globaux et modules */
+@import './styles/global.css';
+@import './styles/navigation.css';
+@import './styles/accueil.css';
+@import './styles/recherche.css';
+@import './styles/services.css';
