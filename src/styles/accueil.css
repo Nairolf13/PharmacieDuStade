@@ -94,6 +94,27 @@
   @apply text-gray-600;
 }
 
+/* Mobile hours display */
+.accueil-hours-mobile {
+  @apply text-right flex flex-col;
+}
+
+.accueil-hours-mobile.today {
+  @apply text-green-700 font-semibold;
+}
+
+.accueil-hours-mobile:not(.today) {
+  @apply text-gray-600;
+}
+
+.accueil-hours-mobile .text-xs {
+  @apply leading-tight;
+}
+
+.accueil-hours-mobile .opacity-75 {
+  @apply text-gray-500;
+}
+
 /* Services section */
 .accueil-services-section {
   @apply bg-white rounded-3xl shadow-xl p-8 card-hover fade-in-up border-l-4 border-green-500;

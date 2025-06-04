@@ -12,20 +12,33 @@ export default defineConfig(({ command }) => {
     define: {
       CESIUM_BASE_URL: JSON.stringify(isProduction ? `/${repoName}/cesium` : '/cesium'),
     },
-  server: {
-    host: '0.0.0.0', // Permet l'accès depuis le réseau local
-    port: 5173,      // Port par défaut de Vite
-    fs: {
-      allow: ['..']
-    },
-    proxy: {
-      '/api/bdpm': {
-        target: 'https://m.base-donnees-publique.medicaments.gouv.fr',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/bdpm/, ''),
-        secure: true
+    build: {
+      outDir: 'dist',
+      assetsDir: 'assets',
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ['react', 'react-dom'],
+            cesium: ['cesium']
+          }
+        }
       }
-    }    },
+    },
+    server: {
+      host: '0.0.0.0',
+      port: 5173,
+      fs: {
+        allow: ['..']
+      },
+      proxy: {
+        '/api/bdpm': {
+          target: 'https://m.base-donnees-publique.medicaments.gouv.fr',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api\/bdpm/, ''),
+          secure: true
+        }
+      }
+    },
     optimizeDeps: {
       include: ['cesium']
     }

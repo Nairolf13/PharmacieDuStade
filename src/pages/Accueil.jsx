@@ -212,9 +212,15 @@ function Accueil() {
       <section className="accueil-hero">
         <div className="w-full px-2 sm:px-3 lg:px-4">
           <div className="text-center fade-in-up">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 sm:mb-8 lg:mb-10 drop-shadow-lg">
+              Pharmacie DU STADE
+            </h1>
+            <p className="text-lg sm:text-xl lg:text-2xl text-white mb-8 sm:mb-10 lg:mb-12 drop-shadow-md opacity-90">
+              Votre santé, notre priorité
+            </p>
             <div className="mb-8">
               <img 
-                src="./assets/imgs/pharma.webp" 
+                src="/assets/imgs/pharma.webp" 
                 alt="Pharmacie du Stade" 
                 className="accueil-hero-image"
               />
@@ -254,21 +260,68 @@ function Accueil() {
             </div>
             <div className="accueil-hours-list">
               {[
-                { day: 'Lundi', hours: '09:00 – 12:30 | 14:30 – 19:30', isToday: false },
-                { day: 'Mardi', hours: '09:00 – 12:30 | 14:30 – 19:30', isToday: false },
-                { day: 'Mercredi', hours: '09:00 – 12:30 | 14:30 – 19:30', isToday: true },
-                { day: 'Jeudi', hours: '09:00 – 12:30 | 14:30 – 19:30', isToday: false },
-                { day: 'Vendredi', hours: '09:00 – 12:30 | 14:30 – 19:30', isToday: false },
-                { day: 'Samedi', hours: '09:00 – 12:30', isToday: false },
-                { day: 'Dimanche', hours: 'Consulter les gardes', isToday: false },
+                { 
+                  day: 'Lundi', 
+                  hours: '09:00 – 12:30 | 14:30 – 19:30', 
+                  mobileHours: { morning: '09:00 - 12:30', afternoon: '14:30 - 19:30' },
+                  isToday: false 
+                },
+                { 
+                  day: 'Mardi', 
+                  hours: '09:00 – 12:30 | 14:30 – 19:30', 
+                  mobileHours: { morning: '09:00 - 12:30', afternoon: '14:30 - 19:30' },
+                  isToday: false 
+                },
+                { 
+                  day: 'Mercredi', 
+                  hours: '09:00 – 12:30 | 14:30 – 19:30', 
+                  mobileHours: { morning: '09:00 - 12:30', afternoon: '14:30 - 19:30' },
+                  isToday: true 
+                },
+                { 
+                  day: 'Jeudi', 
+                  hours: '09:00 – 12:30 | 14:30 – 19:30', 
+                  mobileHours: { morning: '09:00 - 12:30', afternoon: '14:30 - 19:30' },
+                  isToday: false 
+                },
+                { 
+                  day: 'Vendredi', 
+                  hours: '09:00 – 12:30 | 14:30 – 19:30', 
+                  mobileHours: { morning: '09:00 - 12:30', afternoon: '14:30 - 19:30' },
+                  isToday: false 
+                },
+                { 
+                  day: 'Samedi', 
+                  hours: '09:00 – 12:30', 
+                  mobileHours: { morning: '09:00 - 12:30', afternoon: null },
+                  isToday: false 
+                },
+                { 
+                  day: 'Dimanche', 
+                  hours: 'Consulter les gardes', 
+                  mobileHours: { morning: 'Fermé', afternoon: null },
+                  isToday: false 
+                },
               ].map((item, index) => (
                 <div key={index} className={`accueil-hours-item ${item.isToday ? 'today' : ''}`}>
                   <span className={`accueil-hours-day ${item.isToday ? 'today' : ''}`}>
                     {item.day}
                   </span>
-                  <span className={`accueil-hours-time ${item.isToday ? 'today' : ''}`}>
+                  {/* Affichage desktop */}
+                  <span className={`accueil-hours-time ${item.isToday ? 'today' : ''} hidden sm:block`}>
                     {item.hours}
                   </span>
+                  {/* Affichage mobile */}
+                  <div className={`accueil-hours-mobile ${item.isToday ? 'today' : ''} block sm:hidden`}>
+                    <div className="text-xs">
+                      {item.mobileHours.morning}
+                    </div>
+                    {item.mobileHours.afternoon && (
+                      <div className="text-xs opacity-75">
+                        {item.mobileHours.afternoon}
+                      </div>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
