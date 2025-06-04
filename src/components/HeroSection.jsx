@@ -1,4 +1,5 @@
 import React from 'react';
+import { getImagePath } from '../utils/pathUtils';
 
 function HeroSection() {
   return (
@@ -13,7 +14,7 @@ function HeroSection() {
           </p>
           <div className="mb-8">
             <img 
-              src="/PharmacieDuStade/assets/imgs/pharma.webp" 
+              src={getImagePath('pharma.webp')} 
               alt="Pharmacie du Stade" 
               className="accueil-hero-image"
             />

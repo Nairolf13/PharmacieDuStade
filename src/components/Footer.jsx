@@ -1,4 +1,5 @@
 import React from "react";
+import { getLogoPath } from "../utils/pathUtils";
 
 function Footer() {
   return (
@@ -8,7 +9,7 @@ function Footer() {
           {/* Logo et titre dans le footer */}
           <div className="flex justify-center items-center mb-4 sm:mb-6">
             <img
-              src="/PharmacieDuStade/assets/imgs/LogoPharma.png"
+              src={getLogoPath()}
               alt="Pharmacie Logo"
               className="h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 mr-3 sm:mr-4 rounded-full shadow-lg"
             />
