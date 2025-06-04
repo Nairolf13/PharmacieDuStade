@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig(({ command }) => {
   const isProduction = command === 'build'
-  const repoName = 'Pharmacie' // Changez ceci par le nom de votre repository GitHub
+  const repoName = 'PharmacieDuStade' // Nom du repository GitHub
   
   return {
     plugins: [react()],
