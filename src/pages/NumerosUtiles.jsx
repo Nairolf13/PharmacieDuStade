@@ -88,7 +88,7 @@ function NumerosUtiles() {
             <div className="services-card">
               <h3 className="services-card-title">🏥 SOS Médecins</h3>
               <div className="services-contact-info">
-                <p><strong>04 XX XX XX XX</strong></p>
+                <p><strong>04 91 52 91 52</strong></p>
                 <p>Consultations d'urgence à domicile</p>
                 <p className="text-sm text-gray-600">24h/24, 7j/7</p>
               </div>
@@ -106,7 +106,7 @@ function NumerosUtiles() {
             <div className="services-card">
               <h3 className="services-card-title">🦷 Urgences dentaires</h3>
               <div className="services-contact-info">
-                <p><strong>04 XX XX XX XX</strong></p>
+                <p><strong>04 91 54 99 68</strong></p>
                 <p>Centre de garde dentaire</p>
                 <p className="text-sm text-gray-600">Week-ends et jours fériés</p>
               </div>
@@ -115,7 +115,7 @@ function NumerosUtiles() {
             <div className="services-card">
               <h3 className="services-card-title">🩺 Maison médicale de garde</h3>
               <div className="services-contact-info">
-                <p><strong>04 XX XX XX XX</strong></p>
+                <p><strong>04 13 42 72 33</strong></p>
                 <p>Consultations sans rendez-vous</p>
                 <p className="text-sm text-gray-600">Soirs, week-ends, jours fériés</p>
               </div>
@@ -128,22 +128,44 @@ function NumerosUtiles() {
           <h2 className="services-section-title">Centres hospitaliers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="services-info-box">
-              <h3 className="services-info-title">🏥 CHU - Centre Hospitalier Universitaire</h3>
+              <h3 className="services-info-title">🏥 AP-HM - Hôpital Nord</h3>
               <div className="services-contact-details">
-                <p><strong>Standard :</strong> 04 XX XX XX XX</p>
-                <p><strong>Urgences :</strong> 04 XX XX XX XX</p>
-                <p><strong>Adresse :</strong> 123 Avenue de la Santé, 00000 Ville</p>
-                <p><strong>Services :</strong> Urgences 24h/24, toutes spécialités</p>
+                <p><strong>Standard :</strong> 04 91 96 44 44</p>
+                <p><strong>Urgences :</strong> 04 91 96 44 45</p>
+                <p><strong>Adresse :</strong> Chemin des Bourrely, 13015 Marseille</p>
+                <p><strong>Services :</strong> Urgences 24h/24, toutes spécialités, maternité niveau 3</p>
               </div>
             </div>
             
             <div className="services-info-box">
-              <h3 className="services-info-title">🏥 Clinique privée</h3>
+              <h3 className="services-info-title">🏥 Hôpital Européen Marseille</h3>
               <div className="services-contact-details">
-                <p><strong>Standard :</strong> 04 XX XX XX XX</p>
-                <p><strong>Urgences :</strong> 04 XX XX XX XX</p>
-                <p><strong>Adresse :</strong> 456 Rue de la Clinique, 00000 Ville</p>
-                <p><strong>Services :</strong> Chirurgie, maternité, urgences</p>
+                <p><strong>Standard :</strong> 04 13 42 70 00</p>
+                <p><strong>Urgences :</strong> 04 13 42 72 33</p>
+                <p><strong>Adresse :</strong> 6 Rue Désirée Clary, 13003 Marseille</p>
+                <p><strong>Services :</strong> Urgences adultes 24h/24, cardiologie, chirurgie</p>
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div className="services-info-box">
+              <h3 className="services-info-title">🏥 Hôpital de la Timone (AP-HM)</h3>
+              <div className="services-contact-details">
+                <p><strong>Standard :</strong> 04 91 38 00 00</p>
+                <p><strong>Urgences adultes :</strong> 04 91 38 56 41</p>
+                <p><strong>Urgences pédiatriques :</strong> 04 91 38 68 25</p>
+                <p><strong>Adresse :</strong> 264 Rue Saint-Pierre, 13005 Marseille</p>
+                <p><strong>Services :</strong> Centre de traumatologie, neurologie, pédiatrie</p>
+              </div>
+            </div>
+            
+            <div className="services-info-box">
+              <h3 className="services-info-title">🏥 Clinique Bouchard</h3>
+              <div className="services-contact-details">
+                <p><strong>Standard :</strong> 04 91 15 94 94</p>
+                <p><strong>Urgences :</strong> 04 91 15 94 44</p>
+                <p><strong>Adresse :</strong> 77 Rue du Dr Escat, 13006 Marseille</p>
+                <p><strong>Services :</strong> Chirurgie, maternité, cardiologie</p>
               </div>
             </div>
           </div>
@@ -209,111 +231,57 @@ function NumerosUtiles() {
           </div>
         </div>
 
-        {/* Section centres antipoison */}
+        {/* Section centres antipoison et urgences toxicologiques */}
         <div className="services-section">
-          <h2 className="services-section-title">Centres antipoison</h2>
+          <h2 className="services-section-title">Centres antipoison et urgences toxicologiques à Marseille</h2>
           <div className="services-warning">
             <p><strong>En cas d'intoxication, appelez immédiatement un centre antipoison</strong></p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="services-info-box">
-              <h3 className="services-info-title">☠️ Centre Antipoison Paris</h3>
-              <div className="services-contact-details">
-                <p><strong>01 40 05 48 48</strong></p>
-                <p>Hôpital Fernand-Widal</p>
-                <p>24h/24, 7j/7</p>
-              </div>
-            </div>
-            
-            <div className="services-info-box">
-              <h3 className="services-info-title">☠️ Centre Antipoison Lyon</h3>
-              <div className="services-contact-details">
-                <p><strong>04 72 11 69 11</strong></p>
-                <p>Hôpital Édouard-Herriot</p>
-                <p>24h/24, 7j/7</p>
-              </div>
-            </div>
-            
-            <div className="services-info-box">
               <h3 className="services-info-title">☠️ Centre Antipoison Marseille</h3>
               <div className="services-contact-details">
                 <p><strong>04 91 75 25 25</strong></p>
                 <p>Hôpital Salvator</p>
+                <p>249 Boulevard de Sainte-Marguerite, 13009 Marseille</p>
                 <p>24h/24, 7j/7</p>
               </div>
             </div>
             
             <div className="services-info-box">
-              <h3 className="services-info-title">☠️ Centre Antipoison Toulouse</h3>
+              <h3 className="services-info-title">☠️ Urgences Toxicologiques - Hôpital de la Timone</h3>
               <div className="services-contact-details">
-                <p><strong>05 61 77 74 47</strong></p>
-                <p>Hôpital Purpan</p>
+                <p><strong>04 91 38 56 52</strong></p>
+                <p>Service de Réanimation Médicale</p>
+                <p>264 Rue Saint-Pierre, 13005 Marseille</p>
+                <p>24h/24, 7j/7</p>
+              </div>
+            </div>
+            
+            <div className="services-info-box">
+              <h3 className="services-info-title">☠️ Service des Urgences - Hôpital Nord</h3>
+              <div className="services-contact-details">
+                <p><strong>04 91 96 44 50</strong></p>
+                <p>Prise en charge des intoxications</p>
+                <p>Chemin des Bourrely, 13015 Marseille</p>
+                <p>24h/24, 7j/7</p>
+              </div>
+            </div>
+            
+            <div className="services-info-box">
+              <h3 className="services-info-title">☠️ SAMU de Marseille</h3>
+              <div className="services-contact-details">
+                <p><strong>15</strong> ou <strong>04 91 49 91 91</strong></p>
+                <p>Régulation des urgences toxicologiques</p>
+                <p>Coordination avec les centres antipoison</p>
                 <p>24h/24, 7j/7</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Section services publics */}
-        <div className="services-section">
-          <h2 className="services-section-title">Services publics et administratifs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="services-card">
-              <h3 className="services-card-title">🏛️ Mairie</h3>
-              <div className="services-contact-info">
-                <p><strong>04 XX XX XX XX</strong></p>
-                <p>État civil, services municipaux</p>
-                <p className="text-sm text-gray-600">Lun-Ven 8h30-17h</p>
-              </div>
-            </div>
-            
-            <div className="services-card">
-              <h3 className="services-card-title">🏥 CPAM</h3>
-              <div className="services-contact-info">
-                <p><strong>36 46</strong></p>
-                <p>Assurance Maladie</p>
-                <p className="text-sm text-gray-600">Lun-Ven 8h30-17h</p>
-              </div>
-            </div>
-            
-            <div className="services-card">
-              <h3 className="services-card-title">🏛️ Préfecture</h3>
-              <div className="services-contact-info">
-                <p><strong>04 XX XX XX XX</strong></p>
-                <p>Papiers d'identité, permis</p>
-                <p className="text-sm text-gray-600">Sur rendez-vous</p>
-              </div>
-            </div>
-            
-            <div className="services-card">
-              <h3 className="services-card-title">💰 Pôle Emploi</h3>
-              <div className="services-contact-info">
-                <p><strong>39 49</strong></p>
-                <p>Emploi, chômage</p>
-                <p className="text-sm text-gray-600">Lun-Ven 8h-18h</p>
-              </div>
-            </div>
-            
-            <div className="services-card">
-              <h3 className="services-card-title">🏠 CAF</h3>
-              <div className="services-contact-info">
-                <p><strong>32 30</strong></p>
-                <p>Allocations familiales</p>
-                <p className="text-sm text-gray-600">Lun-Ven 9h-16h30</p>
-              </div>
-            </div>
-            
-            <div className="services-card">
-              <h3 className="services-card-title">⚡ EDF</h3>
-              <div className="services-contact-info">
-                <p><strong>09 69 32 15 15</strong></p>
-                <p>Urgences électricité</p>
-                <p className="text-sm text-gray-600">24h/24, 7j/7</p>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
         {/* Section conseils */}
         <div className="services-section">
@@ -380,7 +348,7 @@ function NumerosUtiles() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <div className="services-contact-method">
               <h3 className="services-contact-title">📞 Notre numéro</h3>
-              <p className="services-contact-info">04 XX XX XX XX</p>
+              <p className="services-contact-info">04 91 79 78 54</p>
               <p className="services-contact-hours">Lun-Sam : 8h30-19h30</p>
             </div>
             <div className="services-contact-method">
