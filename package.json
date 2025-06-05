@@ -11,12 +11,10 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
-    "axios": "^1.9.0",
     "cesium": "^1.129.0",
     "maplibre-gl": "^5.6.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "web-vitals": "^5.0.2"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

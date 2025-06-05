@@ -25,14 +25,6 @@ export default defineConfig({
     port: 5173,
     fs: {
       allow: ['..']
-    },
-    proxy: {
-      '/api/bdpm': {
-        target: 'https://m.base-donnees-publique.medicaments.gouv.fr',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/bdpm/, ''),
-        secure: true
-      }
     }
   },
   optimizeDeps: {
