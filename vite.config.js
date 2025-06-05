@@ -1,24 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import cesium from 'vite-plugin-cesium'
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
+export default defineConfig(({ mode }) => ({
+  plugins: [react(), cesium()],
   base: '/PharmacieDuStade/',
-  define: {
-    CESIUM_BASE_URL: JSON.stringify('/PharmacieDuStade/cesium'),
-  },
   build: {
     outDir: 'docs',
-    assetsDir: 'assets',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          cesium: ['cesium']
-        }
-      }
-    }
+    assetsDir: 'assets'
   },
   server: {
     host: '0.0.0.0',
@@ -26,8 +16,5 @@ export default defineConfig({
     fs: {
       allow: ['..']
     }
-  },
-  optimizeDeps: {
-    include: ['cesium']
   }
-})
+}))

@@ -13,8 +13,6 @@ if (!import.meta.env.VITE_CESIUM_ACCESS_TOKEN) {
   console.warn('Cesium Ion access token is not set. Please configure VITE_CESIUM_ACCESS_TOKEN in your environment variables.');
 }
 
-window.CESIUM_BASE_URL = '/cesium';
-
 function Accueil() {
   return (
     <div className="min-h-screen gradient-bg">

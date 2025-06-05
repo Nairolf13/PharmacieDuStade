@@ -13,7 +13,9 @@ function Header({ currentPage, menuItems, isMenuOpen, setIsMenuOpen, handlePageC
               className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14 mr-2 sm:mr-3 lg:mr-4 flex-shrink-0 rounded-full shadow-md" 
             />
             <div className="min-w-0 flex-1">
-              {/* Titre supprimé */}
+              <h1 className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold text-white truncate">
+                PHARMACIE DU STADE
+              </h1>
             </div>
           </div>
           

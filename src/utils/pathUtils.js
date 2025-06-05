@@ -12,3 +12,19 @@ export const getImagePath = (imageName) => {
 export const getLogoPath = () => {
   return getImagePath('LogoPharma.png');
 };
+
+export const getBDPMPath = () => {
+  return getAssetPath('bdpm.csv');
+};
+
+export const getCompositionsPath = () => {
+  return getAssetPath('compositions.txt');
+};
+
+export const getPresentationsPath = () => {
+  return getAssetPath('presentations.txt');
+};
+
+export const getSMRPath = () => {
+  return getAssetPath('smr.txt');
+};
