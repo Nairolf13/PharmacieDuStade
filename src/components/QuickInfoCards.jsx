@@ -19,9 +19,6 @@ function getTodayHours() {
 }
 
 function QuickInfoCards() {
-  const today = new Date();
-  const dayNames = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
-  const todayName = dayNames[today.getDay()];
   const todayHours = getTodayHours();
   const isOpen = todayHours !== 'Fermé' && todayHours !== 'Consulter les gardes';
 
