@@ -1,13 +1,8 @@
-// Utilitaire pour gérer les chemins d'assets en local et sur GitHub Pages
+// Utilitaire pour gérer les chemins d'assets avec Vite
+// Vite gère automatiquement le base path défini dans vite.config.js
 export const getAssetPath = (relativePath) => {
-  // Détection de l'environnement GitHub Pages
-  if (window.location.hostname === 'nairolf13.github.io') {
-    // Sur GitHub Pages, utiliser le chemin avec le nom du repo
-    return `/PharmacieDuStade/${relativePath}`;
-  }
-  
-  // En local ou autres environnements, utiliser le chemin relatif
-  return `./${relativePath}`;
+  // Utiliser les chemins relatifs - Vite s'occupe du base path automatiquement
+  return `/${relativePath}`;
 };
 
 // Helper spécifique pour les images
