@@ -4,9 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: '/PharmacieDuStade/',
   define: {
-    CESIUM_BASE_URL: JSON.stringify('./cesium'),
+    CESIUM_BASE_URL: JSON.stringify('/PharmacieDuStade/cesium'),
   },
   build: {
     outDir: 'dist',

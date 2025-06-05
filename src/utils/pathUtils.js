@@ -1,5 +1,8 @@
 export const getAssetPath = (relativePath) => {
-  return `./${relativePath}`;
+  // En développement, utilise des chemins relatifs
+  // En production, utilise le base path de Vite
+  const basePath = import.meta.env.DEV ? './' : '/PharmacieDuStade/';
+  return `${basePath}${relativePath}`;
 };
 
 export const getImagePath = (imageName) => {
