@@ -9,7 +9,7 @@ export default defineConfig({
     CESIUM_BASE_URL: JSON.stringify('/PharmacieDuStade/cesium'),
   },
   build: {
-    outDir: 'dist',
+    outDir: 'docs',
     assetsDir: 'assets',
     rollupOptions: {
       output: {
