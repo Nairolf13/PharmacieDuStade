@@ -38,7 +38,7 @@ function MobileMenu({ isMenuOpen, setIsMenuOpen, menuItems, currentPage, handleP
           </div>
 
           {/* Items du menu avec scroll optimisé */}
-          <nav className="flex-1 space-y-1 sm:space-y-2 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100" role="navigation" aria-label="Menu principal">
+          <nav className="flex-1 space-y-1 sm:space-y-2 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 bg-white" role="navigation" aria-label="Menu principal">
             {menuItems.map((item, index) => (
               <button
                 key={item.id}
@@ -46,7 +46,7 @@ function MobileMenu({ isMenuOpen, setIsMenuOpen, menuItems, currentPage, handleP
                 className={`mobile-menu-item menu-focus w-full flex items-center px-3 sm:px-4 py-3 sm:py-4 text-left transition-all duration-200 rounded-lg ${
                   currentPage === item.id 
                     ? 'active text-green-700 bg-green-50 border-l-4 border-green-500' 
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-green-600 hover:translate-x-1'
+                    : 'text-gray-800 hover:bg-gray-50 hover:text-green-600 hover:translate-x-1'
                 }`}
                 style={{ animationDelay: `${index * 50}ms` }}
               >

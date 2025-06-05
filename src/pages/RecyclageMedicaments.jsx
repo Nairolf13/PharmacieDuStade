@@ -4,7 +4,6 @@ function RecyclageMedicaments() {
   return (
     <div className="services-container">
       <div className="services-main">
-        {/* Header */}
         <div className="services-header">
           <h1 className="services-title">Recyclage des Médicaments</h1>
           <p className="services-subtitle">
@@ -13,7 +12,6 @@ function RecyclageMedicaments() {
           </p>
         </div>
 
-        {/* Pourquoi recycler */}
         <div className="services-section">
           <h2 className="services-section-title">
             <div className="services-section-icon">
@@ -71,7 +69,6 @@ function RecyclageMedicaments() {
           </div>
         </div>
 
-        {/* Que rapporter */}
         <div className="services-section">
           <h2 className="services-section-title">
             <div className="services-section-icon">
@@ -121,7 +118,6 @@ function RecyclageMedicaments() {
           </div>
         </div>
 
-        {/* Comment procéder */}
         <div className="services-section">
           <h2 className="services-section-title">
             <div className="services-section-icon">
@@ -166,7 +162,6 @@ function RecyclageMedicaments() {
           </div>
         </div>
 
-        {/* Conseils pratiques */}
         <div className="services-section">
           <h2 className="services-section-title">
             <div className="services-section-icon">
@@ -201,7 +196,6 @@ function RecyclageMedicaments() {
           </div>
         </div>
 
-        {/* Chiffres clés */}
         <div className="services-section">
           <h2 className="services-section-title">
             <div className="services-section-icon">
@@ -243,7 +237,6 @@ function RecyclageMedicaments() {
           </div>
         </div>
 
-        {/* Call to action */}
         <div className="services-cta">
           <h2 className="services-cta-title">Agissez pour l'Environnement</h2>
           <p className="services-cta-text">
@@ -255,7 +248,6 @@ function RecyclageMedicaments() {
           </button>
         </div>
 
-        {/* Informations importantes */}
         <div className="services-info">
           <h3 className="services-info-title">📍 Point de Collecte</h3>
           <p className="services-info-text">

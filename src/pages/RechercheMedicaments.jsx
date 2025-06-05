@@ -121,7 +121,6 @@ function RechercheMedicaments() {
     }
   };
 
-  // Nouvelle recherche (reset)
   const handleNewSearch = () => {
     setSelectedId(null);
     setMedicamentInfo(null);
@@ -132,7 +131,6 @@ function RechercheMedicaments() {
 
   return (
     <div className="services-container">
-      {/* Header section */}
       <div className="services-header">
         <h1 className="services-title">
           🔍 Recherche de Médicaments
@@ -148,7 +146,6 @@ function RechercheMedicaments() {
       </div>
 
       <div className="services-content">
-        {/* Search Section */}
         <div className="services-section">
           <h2 className="services-section-title">
             <div className="services-section-icon">
@@ -205,7 +202,6 @@ function RechercheMedicaments() {
           </form>
         </div>
 
-        {/* Error Messages */}
         {error && (
           <div className="services-section">
             <div className={`rounded-xl p-6 border-l-4 ${
@@ -233,7 +229,6 @@ function RechercheMedicaments() {
           </div>
         )}
 
-        {/* Results Section */}
         {results.length > 0 && !selectedId && (
           <div className="services-section">
             <h2 className="services-section-title">
@@ -296,7 +291,6 @@ function RechercheMedicaments() {
           </div>
         )}
         
-        {/* Detailed Information Section */}
         {selectedId && medicamentInfo && (
           <div className="services-section">
             <h2 className="services-section-title">

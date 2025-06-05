@@ -3,7 +3,6 @@ import React from 'react';
 function NumerosUtiles() {
   return (
     <div className="services-container">
-      {/* En-tête de la page */}
       <div className="services-header">
         <h1 className="services-title">Numéros Utiles</h1>
         <p className="services-subtitle">
@@ -11,7 +10,6 @@ function NumerosUtiles() {
         </p>
       </div>
 
-      {/* Section urgences */}
       <div className="services-content">
         <div className="services-section">
           <h2 className="services-section-title">Numéros d'urgence</h2>
@@ -81,7 +79,6 @@ function NumerosUtiles() {
           </div>
         </div>
 
-        {/* Section santé */}
         <div className="services-section">
           <h2 className="services-section-title">Services de santé</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -123,7 +120,6 @@ function NumerosUtiles() {
           </div>
         </div>
 
-        {/* Section centres hospitaliers */}
         <div className="services-section">
           <h2 className="services-section-title">Centres hospitaliers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -171,7 +167,6 @@ function NumerosUtiles() {
           </div>
         </div>
 
-        {/* Section services spécialisés */}
         <div className="services-section">
           <h2 className="services-section-title">Services spécialisés</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -231,7 +226,6 @@ function NumerosUtiles() {
           </div>
         </div>
 
-        {/* Section centres antipoison et urgences toxicologiques */}
         <div className="services-section">
           <h2 className="services-section-title">Centres antipoison et urgences toxicologiques à Marseille</h2>
           <div className="services-warning">
@@ -281,9 +275,6 @@ function NumerosUtiles() {
           </div>
         </div>
 
-
-
-        {/* Section conseils */}
         <div className="services-section">
           <h2 className="services-section-title">Conseils en cas d'urgence</h2>
           <div className="services-highlight">
@@ -311,7 +302,6 @@ function NumerosUtiles() {
           </div>
         </div>
 
-        {/* Section informations importantes */}
         <div className="services-section">
           <h2 className="services-section-title">Informations importantes</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -337,7 +327,6 @@ function NumerosUtiles() {
           </div>
         </div>
 
-        {/* Section contact pharmacie */}
         <div className="services-cta">
           <h2 className="services-cta-title">Notre pharmacie reste à votre disposition</h2>
           <p className="services-cta-text">
