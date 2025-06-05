@@ -19,6 +19,9 @@ dist-ssr
 .DS_Store
 *.suo
 *.ntvs*
+
+# GitHub directory (we don't use GitHub Actions)
+.github/
 *.njsproj
 *.sln
 *.sw?
